@@ -10,3 +10,5 @@ Day 3 Completed 2/2
 Day 4 Completed 2/2
 
 Day 5 Completed 2/2
+
+Day 6 Completed 2/2
