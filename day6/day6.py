@@ -11,8 +11,11 @@ def main():
     print("Challenge 1: ", challenge1Result)
     challenge2Result = challenge2(dayDict)
     print("Challenge 2: ", challenge2Result)
-
-
+'''
+Looping through a massive list for 80 times is not a good idea, 
+especially when the amount of times looped can increase.
+Use a dictionary instead and count the number of times a number appears
+'''
 def challenge1(input):
     currentDayDict = dict(input)
     for i in range(0, 80):
