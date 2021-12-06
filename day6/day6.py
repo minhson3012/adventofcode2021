@@ -24,8 +24,6 @@ def challenge1(input):
             if j == 8:
                 newDayDict[7] = currentDayDict[8]
                 newDayDict[8] = 0
-            elif j == 7:
-                newDayDict[6] = currentDayDict[7]
             elif j == 0:
                 newDayDict[6] += currentDayDict[0]
                 newDayDict[8] = currentDayDict[0]
