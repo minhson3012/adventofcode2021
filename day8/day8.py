@@ -21,25 +21,6 @@ def challenge1(outputs):
                 uniqueNumbers += 1
     return uniqueNumbers
 
-# Mark each position of the pattern with numbers:
-#        1
-#   2         3
-#        4
-#   5         6
-#        7
-
-# Define number patterns based on the position numbers above
-pattern0 = [1, 2, 3, 5, 6, 7]
-pattern1 = [3, 6]
-pattern2 = [1, 3, 4, 5, 7]
-pattern3 = [1, 3, 4, 6, 7]
-pattern4 = [2, 3, 4, 6]
-pattern5 = [1, 3, 4, 5, 7]
-pattern6 = [1, 2, 4, 5, 6, 7]
-pattern7 = [1, 3, 6]
-pattern8 = [1, 2, 3, 4, 5, 6, 7]
-pattern9 = [1, 2, 4, 5, 6, 7]
-
 # Crude solution
 # Comparing unique numbers with other numbers, examining the difference to determine the number
 def challenge2(patterns, outputs):
