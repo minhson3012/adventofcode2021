@@ -76,7 +76,7 @@ def challenge2(patterns, outputs):
         # Find the number 0
         for j in range(0, len(sixLinesChars)):
             difference = getDifferentValues(num7Chars, sixLinesChars[j])
-            if len(difference) > 0:
+            if difference > 0:
                 finalNumbers[6] = sixLinesChars[j]
                 sixLinesChars.pop(j)
                 break
@@ -84,7 +84,7 @@ def challenge2(patterns, outputs):
         # Find the number 6, 9
         for j in range(0, len(sixLinesChars)):
             difference = getDifferentValues(num4Chars, sixLinesChars[j])
-            if len(difference) > 0:
+            if difference > 0:
                 finalNumbers[0] = sixLinesChars[j]
             else:
                 finalNumbers[9] = sixLinesChars[j]
@@ -92,7 +92,7 @@ def challenge2(patterns, outputs):
         # Find the number 3
         for j in range(0, len(fiveLinesChars)):
             difference = getDifferentValues(num1Chars, fiveLinesChars[j])
-            if len(difference) == 0:
+            if difference == 0:
                 finalNumbers[3] = fiveLinesChars[j]
                 fiveLinesChars.pop(j)
                 break
@@ -100,7 +100,7 @@ def challenge2(patterns, outputs):
         # Find the number 2 and 5
         for j in range(0, len(fiveLinesChars)):
             difference = getDifferentValues(num4Chars, fiveLinesChars[j])
-            if len(difference) == 1:
+            if difference == 1:
                 finalNumbers[5] = fiveLinesChars[j]
             else:
                 finalNumbers[2] = fiveLinesChars[j]
@@ -122,18 +122,18 @@ def challenge2(patterns, outputs):
                 for j in finalNumbers:
                     if(len(numChars) == len(finalNumbers[j])):
                         difference = getDifferentValues(numChars, finalNumbers[j])
-                        if len(difference) == 0:
+                        if difference == 0:
                             currentOutput += str(j)
         totalOutput += int(currentOutput)
     return totalOutput
 
-# Get values in listA that are not in listB
+# Get number of values in listA that are not in listB
 def getDifferentValues(listA, listB):
     difference = []
     for element in listA:
         if element not in listB:
             difference.append(element)
-    return difference
+    return len(difference)
 
 def readFile(filename):
     file = open(filename, "r")
