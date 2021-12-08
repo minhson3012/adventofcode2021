@@ -120,8 +120,6 @@ def challenge2(patterns, outputs):
                 currentOutput += '8'
             else:
                 for j in finalNumbers:
-                    # print("numChars ", numChars)
-                    # print("finalNumbers[j] ", finalNumbers[j])
                     if(len(numChars) == len(finalNumbers[j])):
                         difference = getDifferentValues(numChars, finalNumbers[j])
                         if len(difference) == 0:
