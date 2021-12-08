@@ -73,7 +73,7 @@ def challenge2(patterns, outputs):
             elif len(num) == 7:
                 finalNumbers[8] = ([char for char in num])
 
-        # Find the number 0
+        # Find the number 0 by comparing 7 with numbers with 6 lines
         for j in range(0, len(sixLinesChars)):
             difference = getDifferentValues(num7Chars, sixLinesChars[j])
             if difference > 0:
@@ -81,7 +81,7 @@ def challenge2(patterns, outputs):
                 sixLinesChars.pop(j)
                 break
 
-        # Find the number 6, 9
+        # Find the number 6, 9 by comparing 4 with the rest of the 6 lines numbers
         for j in range(0, len(sixLinesChars)):
             difference = getDifferentValues(num4Chars, sixLinesChars[j])
             if difference > 0:
@@ -89,7 +89,7 @@ def challenge2(patterns, outputs):
             else:
                 finalNumbers[9] = sixLinesChars[j]
 
-        # Find the number 3
+        # Find the number 3 by comparing 1 with 5 lines numbers
         for j in range(0, len(fiveLinesChars)):
             difference = getDifferentValues(num1Chars, fiveLinesChars[j])
             if difference == 0:
@@ -97,7 +97,7 @@ def challenge2(patterns, outputs):
                 fiveLinesChars.pop(j)
                 break
 
-        # Find the number 2 and 5
+        # Find the number 2 and 5 by comparing 4 with the rest of the 5 lines numbers
         for j in range(0, len(fiveLinesChars)):
             difference = getDifferentValues(num4Chars, fiveLinesChars[j])
             if difference == 1:
